@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <Button
+        android:id="@+id/daicamera"
+        android:layout_width="126dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+
+
+        android:background="@drawable/btn_bg"
+        android:text="camera" />
+
+    <Button
+        android:id="@+id/daisingle"
+        android:layout_width="126dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+
+
+        android:background="@drawable/btn_bg"
+        android:text="single image" />
+
+    <Button
+        android:id="@+id/multiple"
+        android:layout_width="126dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+
+
+        android:background="@drawable/btn_bg"
+        android:text="multiple Image" />
+
+
+</LinearLayout>

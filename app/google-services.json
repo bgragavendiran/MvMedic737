@@ -1,0 +1,115 @@
+{
+  "project_info": {
+    "project_number": "204605361501",
+    "firebase_url": "https://firstprojectof-insginiaencorp.firebaseio.com",
+    "project_id": "firstprojectof-insginiaencorp",
+    "storage_bucket": "firstprojectof-insginiaencorp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:204605361501:android:8b94a2e5db4060aa626cb4",
+        "android_client_info": {
+          "package_name": "com.example.a20th_2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "204605361501-thj202rt6tu87pv0ocjrnhbuaave9g06.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.a20th_2",
+            "certificate_hash": "1c7c2cc67b77f59e10f5666393888c9590d3e7af"
+          }
+        },
+        {
+          "client_id": "204605361501-omorg3m6fkl1chssb6h4r1tq97c17gpu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.a20th_2",
+            "certificate_hash": "2312d64593b0584d0728034c3c75d084df2add2d"
+          }
+        },
+        {
+          "client_id": "204605361501-lvlkduj9ltmb0rgq1rlv0grukuptugvu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3S0dQbhTZpjJ0L6uIqnrMMIVLDb_mbyM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "204605361501-lvlkduj9ltmb0rgq1rlv0grukuptugvu.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "204605361501-dcdotm1usqvt29hqhdtjrjbo1qqfibc8.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "insigniaencorp.demo"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:204605361501:android:42197c10f8743553626cb4",
+        "android_client_info": {
+          "package_name": "com.example.mv_medic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "204605361501-8jqh6stvc40d44usrbgnemdhai0ms9p3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mv_medic",
+            "certificate_hash": "1c7c2cc67b77f59e10f5666393888c9590d3e7af"
+          }
+        },
+        {
+          "client_id": "204605361501-1t4dv3ikun03grutmtp7e6epj4fguip7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mv_medic",
+            "certificate_hash": "2312d64593b0584d0728034c3c75d084df2add2d"
+          }
+        },
+        {
+          "client_id": "204605361501-lvlkduj9ltmb0rgq1rlv0grukuptugvu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3S0dQbhTZpjJ0L6uIqnrMMIVLDb_mbyM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "204605361501-lvlkduj9ltmb0rgq1rlv0grukuptugvu.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "204605361501-dcdotm1usqvt29hqhdtjrjbo1qqfibc8.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "insigniaencorp.demo"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

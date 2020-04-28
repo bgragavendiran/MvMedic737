@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Mv-Medic</string>
+    <string name="title_activity_home_">Home_Activity</string>
+    <string name="title_home">Home</string>
+    <string name="title_account">Account</string>
+    <string name="title_reminder">Remainders</string>
+    <string name="title_article">Articles</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="mother_baby_care"><![CDATA[Mother & baby care]]></string>
+    <string name="clean_clear_facewash"><![CDATA[clean&clear facewash]]></string>
+    <string name="clean_clear_juicetoner"><![CDATA[Clean&clear juicetoner]]></string>
+    <string name="default_notification_channel_id">Notification</string>
+    <string name="fcm_message">Notification</string>
+
+
+</resources>
