@@ -8,6 +8,7 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".fragments.Accountfragment">
 
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -19,112 +20,172 @@
             android:orientation="vertical">
 
             <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                android:textSize="25dp"
+                    android:text="Personal details"
+                    android:textColor="@color/mapboxBlue" />
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_alignParentLeft="true"
+                        android:src="@drawable/name"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Name"
+                        android:textSize="20dp"/>
+                    <TextView
+                        android:id="@+id/proname"
+                        android:layout_width="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:fontFamily="@font/cantarell" />
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:text="Personal details"
-                android:textColor="@color/mapboxBlue" />
-
-            <TextView
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignParentLeft="true"
+                    android:src="@drawable/email"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:text="Email ID" />
+                <TextView
+                    android:id="@+id/proemail"
+                    android:layout_width="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/cantarell" />
+            </LinearLayout>
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Name" />
-
-            <TextView
-                android:id="@+id/proname"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignParentLeft="true"
+                    android:src="@drawable/call"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:text="Phone " />
+                <TextView
+                    android:id="@+id/pronum"
+                    android:layout_width="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/cantarell" />
+            </LinearLayout>
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:fontFamily="@font/cantarell" />
-
-            <TextView
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignParentLeft="true"
+                    android:src="@drawable/calendar"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:text="Date of Birth" />
+                <TextView
+                    android:id="@+id/proexp"
+                    android:layout_width="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/cantarell" />
+            </LinearLayout>
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="emailId" />
-
-            <TextView
-                android:id="@+id/proemail"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignParentLeft="true"
+                    android:src="@drawable/map"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:text="Address" />
+                <TextView
+                    android:id="@+id/proadress"
+                    android:layout_width="match_parent"
+                    android:height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:textSize="20dp"
+                    android:maxLines="2"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/cantarell" />
+            </LinearLayout>
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignParentLeft="true"
+                    android:src=""/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:text="City" />
+                <TextView
+                    android:id="@+id/progcity"
+                    android:layout_width="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/cantarell" />
+            </LinearLayout>
 
-                android:fontFamily="@font/cantarell"
-                android:textSize="18sp"
-                tools:ignore="DuplicateIds" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="date of birth" />
 
-            <TextView
-                android:id="@+id/proexp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:ems="10"
-
-                android:fontFamily="@font/cantarell"
-
-                android:inputType="phone" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="phoneNumber" />
-
-            <TextView
-                android:id="@+id/pronum"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
-                android:layout_marginBottom="8dp"
-                android:fontFamily="@font/cantarell" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Address" />
-
-            <TextView
-                android:id="@+id/proadress"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-
-                android:fontFamily="@font/cantarell" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="city" />
-
-            <TextView
-                android:id="@+id/progcity"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-
-            <View
+                <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginBottom="8dp"
                 android:background="#000" />
-
-
-            <Button
-                android:id="@+id/mapbutton"
-
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:text="Return Home"
-                android:textColor="#fff"
-                android:visibility="invisible" />
-
-        </LinearLayout>
-
-    </ScrollView>
-
+                <Button
+                    android:id="@+id/mapbutton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="Return Home"
+                    android:textColor="#fff"
+                    android:visibility="invisible" />
+            </LinearLayout>
+        </ScrollView>
     <TextView
         android:id="@+id/nothing"
         android:layout_width="match_parent"
