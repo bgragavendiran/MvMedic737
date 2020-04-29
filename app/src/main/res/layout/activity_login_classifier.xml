@@ -73,20 +73,12 @@
                         android:orientation="vertical"
                         android:padding="16dp">
 
-                        <ImageButton
-
-
-                            android:layout_width="147dp"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentRight="true"
-                            android:background="@drawable/image_design"
-                            android:paddingLeft="20dp"
-
-                            android:paddingTop="8dp"
-                            android:paddingRight="16dp"
-                            android:paddingBottom="8dp"
-                            android:src="@drawable/user" />
-
+                       <ImageView
+                           android:layout_width="100dp"
+                           android:layout_height="100dp"
+                           android:src="@drawable/user"
+                           android:layout_alignParentRight="true"
+                           />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -134,18 +126,12 @@
                         android:orientation="vertical"
                         android:padding="16dp">
 
-                        <ImageButton
-
-
-                            android:layout_width="143dp"
-                            android:layout_height="116dp"
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/enterprise"
                             android:layout_alignParentRight="true"
-                            android:background="@drawable/image_design"
-                            android:paddingLeft="20dp"
-                            android:paddingTop="8dp"
-                            android:paddingRight="16dp"
-                            android:paddingBottom="8dp"
-                            android:src="@drawable/medical" />
+                        />
 
                         <TextView
                             android:layout_width="match_parent"
