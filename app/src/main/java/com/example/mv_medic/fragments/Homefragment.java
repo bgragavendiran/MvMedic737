@@ -1,13 +1,10 @@
 package com.example.mv_medic.fragments;
 
-import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.ComponentName;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
-import android.content.pm.PackageManager;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.telephony.PhoneNumberUtils;
 import android.util.Log;
@@ -24,14 +21,12 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.cardview.widget.CardView;
-import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import com.example.mv_medic.Myorder;
 import com.example.mv_medic.R;
-import com.example.mv_medic.login.LoginClassifierActivity;
+import com.example.mv_medic.main.LoginClassifierActivity;
 import com.example.mv_medic.mainacts.medical_tourism_Activity;
-import com.example.mv_medic.payment;
 import com.example.mv_medic.uploadActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;

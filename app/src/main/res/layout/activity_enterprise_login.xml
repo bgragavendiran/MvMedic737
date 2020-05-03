@@ -1,105 +1,164 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".login.enterprise.enterpriseActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginBottom="40dp"
+            android:layout_height="130dp">
 
-    <ImageView
-        android:id="@+id/entimage"
-        android:layout_width="404dp"
-        android:layout_height="97dp"
-        android:layout_marginBottom="13dp"
-        android:src="@drawable/logo"
-        app:layout_constraintBottom_toTopOf="@+id/ename"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></ImageView>
+            <ImageView
+                android:id="@+id/entimage"
+                android:layout_width="100dp"
+                android:layout_height="70dp"
+                android:src="@drawable/logo"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="80dp"
+                android:layout_marginRight="20dp"
+                >
 
-    <EditText
-        android:id="@+id/ename"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="96dp"
-        android:layout_marginTop="132dp"
-        android:ems="10"
-        android:hint="Enterprise Name"
-        android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            </ImageView>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/waves">
 
-    <EditText
-        android:id="@+id/eid"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="96dp"
-        android:layout_marginTop="40dp"
-        android:ems="10"
-        android:hint="Enterprise ID"
-        android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ename" />
+            </ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Register"
 
-    <EditText
-        android:id="@+id/eemail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="96dp"
-        android:layout_marginTop="40dp"
-        android:ems="10"
-        android:hint="Enterprise Mail ID"
-        android:inputType="textEmailAddress"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/eid" />
+                android:textSize="18dp"
+                android:background="@drawable/text_bg"
+                android:layout_marginLeft="20dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="2dp"
+                android:layout_marginTop="80dp"
+                android:textColor="@color/blue">
 
-    <EditText
-        android:id="@+id/eadd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="96dp"
-        android:layout_marginTop="40dp"
-        android:ems="10"
-        android:hint="Postal Address"
-        android:inputType="textPostalAddress"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ephno" />
+            </TextView>
 
-    <Button
-        android:id="@+id/signup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="144dp"
-        android:layout_marginTop="44dp"
-        android:background="@drawable/btn_bg"
 
-        android:text="Signup"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/eadd" />
+        </RelativeLayout>
 
-    <EditText
-        android:id="@+id/ephno"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="96dp"
-        android:layout_marginTop="36dp"
-        android:ems="10"
-        android:hint="Enterprise Phone Number"
-        android:inputType="phone"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/eemail" />
 
-    <TextView
-        android:id="@+id/entloginText"
-        style="@style/Widget.AppCompat.TextView"
-        android:layout_width="207dp"
-        android:layout_height="28dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginBottom="88dp"
-        android:text="Already user!!!! Sign in"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        <EditText
+            android:id="@+id/ename"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_gravity="center"
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_marginTop="100dp"
+            android:ems="10"
+            android:background="@drawable/text_bg"
+            android:padding="10dp"
+            android:hint="Enterprise Name"
+            android:inputType="textPersonName"
+            />
+
+        <EditText
+            android:id="@+id/eid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+
+            android:layout_marginTop="40dp"
+            android:ems="10"
+            android:hint="Enterprise ID"
+            android:background="@drawable/text_bg"
+            android:padding="10dp"
+            android:inputType="textPersonName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ename" />
+
+        <EditText
+            android:id="@+id/eemail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+
+            android:layout_marginTop="40dp"
+            android:ems="10"
+            android:hint="Enterprise Mail ID"
+            android:background="@drawable/text_bg"
+
+            android:padding="10dp"
+            android:inputType="textEmailAddress"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/eid" />
+        <EditText
+            android:id="@+id/ephno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_marginTop="36dp"
+            android:ems="10"
+            android:background="@drawable/text_bg"
+
+            android:padding="10dp"
+            android:hint="Enterprise Phone Number"
+            android:inputType="phone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/eemail" />
+
+        <EditText
+            android:id="@+id/eadd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_marginTop="40dp"
+            android:ems="10"
+            android:hint="Postal Address"
+            android:inputType="textPostalAddress"
+            android:background="@drawable/text_bg"
+
+            android:padding="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ephno" />
+
+        <Button
+            android:id="@+id/signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="44dp"
+            android:background="@drawable/rounded_corner_button"
+
+            android:text="Signup"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center"
+            />
+
+
+
+        <TextView
+            android:id="@+id/entloginText"
+            style="@style/Widget.AppCompat.TextView"
+            android:layout_width="207dp"
+            android:layout_height="28dp"
+            android:layout_marginTop="30dp"
+
+            android:layout_marginBottom="88dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Already user!!!! Sign in"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="18sp"
+            />
+
+
+    </LinearLayout>
+
+</ScrollView>

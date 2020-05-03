@@ -3,7 +3,6 @@ package com.example.mv_medic;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -18,7 +17,6 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,15 +28,21 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.razorpay.Checkout;
+import com.razorpay.PaymentData;
 import com.razorpay.PaymentResultListener;
+import com.razorpay.PaymentResultWithDataListener;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class payment extends AppCompatActivity implements PaymentResultListener {
+import java.util.Date;
+
+public class payment extends AppCompatActivity implements PaymentResultWithDataListener {
     private TextView Tdom, Tloc, Tprice;
     private Button btproceed;
     private DatabaseReference mdata1;
+    String currentDateTimeString1;
+    private  DatabaseReference md2;
 
 
     @SuppressLint("SourceLockedOrientationActivity")
@@ -49,11 +53,13 @@ public class payment extends AppCompatActivity implements PaymentResultListener 
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         Tdom = findViewById(R.id.billnumber);
         Tprice = findViewById(R.id.pricenumber);
+        currentDateTimeString1 = (String) android.text.format.DateFormat.format("yyyy-MM-dd hh:mm ", new Date());
         btproceed = findViewById(R.id.proceedpay);
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
         FirebaseUser user = mAuth.getCurrentUser();
 
         mdata1 = FirebaseDatabase.getInstance().getReference(user.getUid()).child("invoice");
+        md2=FirebaseDatabase.getInstance().getReference().child(user.getUid()).child("Myordersss").child(currentDateTimeString1);
 
 
         btproceed.setOnClickListener(new View.OnClickListener() {
@@ -94,15 +100,23 @@ public class payment extends AppCompatActivity implements PaymentResultListener 
     }
 
     @Override
-    public void onPaymentSuccess(String s) {
+    public void onPaymentSuccess(String s, PaymentData paymentData) {
         Toast.makeText(this, "payment sucessfull", Toast.LENGTH_LONG).show();
+        String paymentId=paymentData.getPaymentId();
+        String phonenumer=paymentData.getUserContact();
+
+        md2.child("Date").setValue(currentDateTimeString1);
+        md2.child("PaymentId").setValue(paymentId);
+        md2.child("Price").setValue(Tprice.getText().toString());
+        md2.child("Phonenumber").setValue(phonenumer);
+
+
 
     }
 
     @Override
-    public void onPaymentError(int i, String s) {
+    public void onPaymentError(int i, String s, PaymentData paymentData) {
         Toast.makeText(this, "payment error", Toast.LENGTH_LONG).show();
-
 
     }
 

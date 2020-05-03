@@ -1,195 +1,420 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="10dp"
+    android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".fragments.Accountfragment">
 
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+
+        android:layout_height="150dp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/waves"/>
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/back"
+            android:layout_marginTop="80dp"
+            android:src="@drawable/ic_arrow_back_black_24dp"/>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LOGOUT"
+            android:textSize="20dp"
+            android:id="@+id/logout"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+
+            android:layout_toLeftOf="@+id/logimg"
+
+
+            android:textColor="@color/blue"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+
+            android:id="@+id/logimg"
+
+            android:src="@drawable/ic_exit_to_app_blue_24dp"
+            />
+        <ImageView
+            android:id="@+id/entimage"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:src="@drawable/logo"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="80dp"
+            android:layout_marginRight="20dp"
+            >
+
+        </ImageView>
+
+
+    </RelativeLayout>
+
+
+
+
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
 
         <LinearLayout
             android:id="@+id/lin"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
+
             <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                android:textSize="25dp"
-                    android:text="Personal details"
-                    android:textColor="@color/mapboxBlue" />
-            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Personal details"
+                android:textColor="@color/mapboxBlue"
+                android:textSize="25dp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
+                android:background="@drawable/btn_bg"
+                android:elevation="6dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp">
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal">
-                    <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_alignParentLeft="true"
-                        android:src="@drawable/name"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Name"
-                        android:textSize="20dp"/>
-                    <TextView
-                        android:id="@+id/proname"
+
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_alignParentRight="true"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:background="@drawable/text_bg">
+
+                        <ImageView
+                            android:id="@+id/nameimg"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/name" />
+
+                        <TextView
+                            android:id="@+id/nametext"
+                            android:layout_width="110dp"
+                            android:layout_height="30dp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+
+                            android:layout_toRightOf="@+id/nameimg"
+                            android:text="Name"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:id="@+id/proname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_toRightOf="@+id/nametext"
+                            android:fontFamily="@font/cantarell"
+                            android:textSize="15dp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:background="@drawable/text_bg"
+                        android:layout_marginTop="10dp">
+
+                        <ImageView
+                            android:id="@+id/mailimg"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/email" />
+
+                        <TextView
+                            android:id="@+id/mailtext"
+                            android:layout_width="110dp"
+                            android:layout_height="30dp"
+                            android:layout_toRightOf="@+id/mailimg"
+
+                            android:gravity="center"
+                            android:text="Email ID"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/proemail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_toRightOf="@+id/mailtext"
+                            android:fontFamily="@font/cantarell"
+                            android:textSize="15dp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:background="@drawable/text_bg"
+                        android:layout_marginTop="10dp">
+
+                        <ImageView
+                            android:id="@+id/phoneimg"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/call" />
+
+                        <TextView
+                            android:id="@+id/phonetext"
+                            android:layout_width="110dp"
+                            android:layout_height="30dp"
+                            android:textStyle="bold"
+
+                            android:gravity="center"
+                            android:layout_toRightOf="@+id/phoneimg"
+                            android:text="Phone "
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:id="@+id/pronum"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginBottom="8dp"
+                            android:layout_toRightOf="@+id/phonetext"
+                            android:fontFamily="@font/cantarell"
+                            android:textSize="15dp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/text_bg"
+                        android:padding="10dp"
+                        android:layout_marginTop="10dp">
+
+                        <ImageView
+                            android:id="@+id/dobimg"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/calendar" />
+
+                        <TextView
+                            android:id="@+id/dobtext"
+                            android:layout_width="110dp"
+                            android:layout_height="30dp"
+                            android:layout_toRightOf="@+id/dobimg"
+                            android:text="DOB"
+
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:id="@+id/proexp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginBottom="8dp"
+                            android:layout_toRightOf="@+id/dobtext"
+                            android:fontFamily="@font/cantarell"
+                            android:textSize="15dp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/text_bg"
+                        android:padding="10dp"
+                        android:layout_marginTop="10dp">
+
+                        <ImageView
+                            android:id="@+id/addressimg"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/map" />
+
+                        <TextView
+                            android:id="@+id/addresstext"
+                            android:layout_width="110dp"
+                            android:layout_height="30dp"
+                            android:gravity="center"
+                            android:layout_toRightOf="@+id/addressimg"
+                            android:text="Address"
+                            android:textStyle="bold"
+
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:id="@+id/proadress"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginBottom="8dp"
+                            android:layout_toRightOf="@+id/addresstext"
+                            android:height="40dp"
+                            android:fontFamily="@font/cantarell"
+                            android:maxLines="2"
+                            android:textSize="15dp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:background="@drawable/text_bg"
+                        android:layout_marginTop="10dp">
+
+                        <ImageView
+                            android:id="@+id/cityimg"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/city" />
+
+                        <TextView
+                            android:id="@+id/citytext"
+                            android:layout_width="110dp"
+                            android:layout_height="30dp"
+                            android:layout_toRightOf="@+id/cityimg"
+                            android:text="City"
+                            android:textStyle="bold"
+
+                            android:gravity="center"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:id="@+id/progcity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginBottom="8dp"
+                            android:layout_toRightOf="@+id/citytext"
+                            android:fontFamily="@font/cantarell"
+                            android:textSize="15dp" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
-                        android:fontFamily="@font/cantarell" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_alignParentLeft="true"
-                    android:src="@drawable/email"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="20dp"
-                    android:text="Email ID" />
-                <TextView
-                    android:id="@+id/proemail"
-                    android:layout_width="match_parent"
-                    android:layout_alignParentRight="true"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:fontFamily="@font/cantarell" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_alignParentLeft="true"
-                    android:src="@drawable/call"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="20dp"
-                    android:text="Phone " />
-                <TextView
-                    android:id="@+id/pronum"
-                    android:layout_width="match_parent"
-                    android:layout_alignParentRight="true"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:fontFamily="@font/cantarell" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_alignParentLeft="true"
-                    android:src="@drawable/calendar"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="20dp"
-                    android:text="Date of Birth" />
-                <TextView
-                    android:id="@+id/proexp"
-                    android:layout_width="match_parent"
-                    android:layout_alignParentRight="true"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:fontFamily="@font/cantarell" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_alignParentLeft="true"
-                    android:src="@drawable/map"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="20dp"
-                    android:text="Address" />
-                <TextView
-                    android:id="@+id/proadress"
-                    android:layout_width="match_parent"
-                    android:height="40dp"
-                    android:layout_alignParentRight="true"
-                    android:textSize="20dp"
-                    android:maxLines="2"
-                    android:layout_height="60dp"
-                    android:layout_marginBottom="8dp"
-                    android:fontFamily="@font/cantarell" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_alignParentLeft="true"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="20dp"
-                    android:text="City" />
-                <TextView
-                    android:id="@+id/progcity"
-                    android:layout_width="match_parent"
-                    android:layout_alignParentRight="true"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:fontFamily="@font/cantarell" />
-            </LinearLayout>
+                        android:gravity="center"
+                        android:layout_marginTop="20dp">
+                        <Button
+                            android:layout_width="200dp"
+                            android:layout_height="50dp"
+                            android:text="Edit Details"
+                            android:background="@drawable/btn_bg"/>
+                    </RelativeLayout>
 
 
+                </LinearLayout>
 
-                <View
+            </androidx.cardview.widget.CardView>
+
+
+            <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginBottom="8dp"
                 android:background="#000" />
-                <Button
-                    android:id="@+id/mapbutton"
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My orders"
+                android:textColor="@color/mapboxBlue"
+                android:textSize="25dp"></TextView>
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:text="Return Home"
-                    android:textColor="#fff"
-                    android:visibility="invisible" />
-            </LinearLayout>
-        </ScrollView>
+                    android:layout_height="wrap_content">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="12dp"
+                        android:background="@drawable/btn_bg"
+                        android:elevation="6dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="6dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                            </androidx.recyclerview.widget.RecyclerView>
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+
+
+    </ScrollView>
     <TextView
         android:id="@+id/nothing"
         android:layout_width="match_parent"
         android:layout_height="20dp"
         android:visibility="invisible"
         tools:ignore="MissingConstraints" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

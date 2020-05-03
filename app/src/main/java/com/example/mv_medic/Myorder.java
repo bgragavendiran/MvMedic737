@@ -39,7 +39,7 @@ public class Myorder extends AppCompatActivity {
         FirebaseUser user = mAuth.getCurrentUser();
 
         datalist.setLayoutManager(new LinearLayoutManager(this));
-        mdata = FirebaseDatabase.getInstance().getReference(user.getUid()).child("Myorders");
+        mdata = FirebaseDatabase.getInstance().getReference(user.getUid()).child("Myordersss");
         mdata.keepSynced(true);
 
 
@@ -56,8 +56,8 @@ public class Myorder extends AppCompatActivity {
                     (data.class, R.layout.data_row, dataViewHolder.class, mdata) {
                 @Override
                 protected void populateViewHolder(dataViewHolder viewHolder, data mo, int i) {
-                    viewHolder.setName(mo.getName());
-                    viewHolder.setInvoiceno(mo.getInvoiceno());
+                    viewHolder.setName(mo.getPhonenumber());
+                    viewHolder.setInvoiceno(mo.getPaymentId());
                     viewHolder.setPrice(mo.getPrice());
                     viewHolder.setDate(mo.getDate());
 

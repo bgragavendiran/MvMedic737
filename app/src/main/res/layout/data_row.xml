@@ -11,7 +11,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="128dp"
+        android:layout_height="match_parent"
         android:layout_marginLeft="7dp"
         android:orientation="horizontal"
         android:weightSum="2">
@@ -32,11 +32,23 @@
                 android:textStyle="bold"></TextView>
 
             <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PaymentId" />
+
+            <TextView
                 android:id="@+id/invno"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="35dp"
                 android:textSize="20dp"></TextView>
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PhoneNumber" />
 
             <TextView
                 android:id="@+id/name"
@@ -49,7 +61,7 @@
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical"
             android:weightSum="1">
 

@@ -19,13 +19,10 @@
             android:name=".Myorder"
             android:screenOrientation="fullSensor" />
         <activity
-            android:name=".login.user.otp"
+            android:name=".main.user.otp"
             android:screenOrientation="fullSensor" />
         <activity
-            android:name=".login.enterprise.entpriseLoGin"
-            android:screenOrientation="fullSensor" />
-        <activity
-            android:name=".login.user.Register"
+            android:name=".main.user.Register"
             android:screenOrientation="fullSensor" />
         <activity
             android:name=".mainacts.medical_tourism_Activity"
@@ -37,13 +34,14 @@
             android:name=".login.enterprise.enterpriseLoginActivity"
             android:screenOrientation="fullSensor" />
         <activity
-            android:name=".login.LoginClassifierActivity"
+            android:name=".main.LoginClassifierActivity"
+            android:screenOrientation="fullSensor" />
+
+        <activity
+            android:name=".main.user.loginActivity"
             android:screenOrientation="fullSensor" />
         <activity
-            android:name=".login.user.login2Activity"
-            android:screenOrientation="fullSensor" />
-        <activity
-            android:name=".login.user.loginActivity"
+            android:name=".main.user.login2Activity"
             android:screenOrientation="fullSensor" />
         <activity
             android:name=".uploadActivity"
@@ -65,7 +63,7 @@
 
         <meta-data
             android:name="com.razorpay.ApiKey"
-            android:value="rzp_test_y4ycGJGmiXcmCY" />
+            android:value="rzp_live_7XmULnlPLDbKOR" />
 
         <meta-data
             android:name="preloaded_fonts"

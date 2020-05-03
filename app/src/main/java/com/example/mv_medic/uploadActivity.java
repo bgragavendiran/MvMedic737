@@ -230,10 +230,16 @@ public class uploadActivity extends AppCompatActivity {
 
     @SuppressLint("SetTextI18n")
     private void StoreLink(String url) {
-        DatabaseReference databaseReference1 = FirebaseDatabase.getInstance().getReference().child(user.getUid()).child("orders").child(phone).child(currentDateTimeString);
+
+        DatabaseReference databaseReference1 = FirebaseDatabase.getInstance().getReference().child(user.getUid()).child("orders").child(currentDateTimeString);
+        DatabaseReference database=FirebaseDatabase.getInstance().getReference().child(user.getUid());
+        database.child("phonenumber").setValue(phone);
+
         HashMap<String, String> hashMap1 = new HashMap<>();
         hashMap1.put("ImageLink", url);
+        hashMap1.put("Status","0");
         databaseReference1.push().setValue(hashMap1);
+
 
         progressDialog.dismiss();
         alert.setText("ImageUploaded Successfully ");

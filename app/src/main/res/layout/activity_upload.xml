@@ -15,55 +15,81 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.appcompat.widget.Toolbar
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/blue">
+            android:layout_marginBottom="40dp"
+            android:layout_height="130dp">
 
-            <RelativeLayout
+            <ImageView
+                android:id="@+id/entimage"
+                android:layout_width="100dp"
+                android:layout_height="70dp"
+                android:src="@drawable/logo"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="80dp"
+                android:layout_marginRight="20dp"
+                >
+
+            </ImageView>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/waves">
+
+            </ImageView>
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="Upload"
 
-                android:orientation="vertical">
+                android:textSize="18dp"
+                android:background="@drawable/text_bg"
+                android:layout_marginLeft="20dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="2dp"
+                android:layout_marginTop="80dp"
+                android:textColor="@color/blue">
 
-                <ImageButton
-                    android:id="@+id/return1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@color/transparent"
-                    android:onClick="returnback"
-                    android:src="@drawable/ic_arrow_back_black_24dp">
+            </TextView>
+            <ImageButton
+                android:id="@+id/return1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:layout_marginTop="50dp"
+                android:onClick="returnback"
+                android:src="@drawable/ic_arrow_back_black_24dp">
 
-                </ImageButton>
+            </ImageButton>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="150dp"
-                    android:text="upload"
-                    android:textColor="#ffffff"
-                    android:textSize="20dp">
+            <ImageButton
+                android:id="@+id/logout1"
+                android:layout_width="wrap_content"
 
-                </TextView>
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
 
-                <ImageButton
-                    android:id="@+id/logout1"
-                    android:layout_width="wrap_content"
+                android:layout_marginRight="10dp"
+                android:background="@color/transparent"
+                android:layout_marginTop="25dp"
 
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
+                android:onClick="logoutactivity"
+                android:src="@drawable/ic_exit_to_app_black_24dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LOGOUT"
+                android:textSize="10dp"
+                android:layout_toLeftOf="@+id/logout1"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="5dp"
 
-                    android:layout_marginRight="15dp"
-                    android:background="@color/transparent"
-
-                    android:onClick="logoutactivity"
-                    android:src="@drawable/ic_exit_to_app_black_24dp" />
-
-            </RelativeLayout>
+                android:textColor="@android:color/white"/>
 
 
-        </androidx.appcompat.widget.Toolbar>
+        </RelativeLayout>
 
         <ImageView
             android:id="@+id/uploadimg"

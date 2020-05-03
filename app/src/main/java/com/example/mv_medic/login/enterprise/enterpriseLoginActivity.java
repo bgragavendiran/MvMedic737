@@ -15,10 +15,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.mv_medic.R;
-import com.example.mv_medic.login.user.Security;
-import com.example.mv_medic.login.user.Students;
-import com.example.mv_medic.login.user.login2Activity;
-import com.example.mv_medic.login.user.loginActivity;
+
+import com.example.mv_medic.main.LoginClassifierActivity;
+import com.example.mv_medic.main.user.login2Activity;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -61,7 +60,7 @@ public class enterpriseLoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(getApplicationContext(), entpriseLoGin.class);
+                Intent intent = new Intent(getApplicationContext(), LoginClassifierActivity.class);
                 startActivity(intent);
                 finish();
             }

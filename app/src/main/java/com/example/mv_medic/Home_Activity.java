@@ -17,9 +17,8 @@ import androidx.fragment.app.Fragment;
 
 import com.example.mv_medic.fragments.Accountfragment;
 import com.example.mv_medic.fragments.Articlefragment;
-import com.example.mv_medic.fragments.Dashboardfragment;
 import com.example.mv_medic.fragments.Homefragment;
-import com.example.mv_medic.login.LoginClassifierActivity;
+import com.example.mv_medic.main.LoginClassifierActivity;
 import com.example.mv_medic.notificaion.NotificationFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;

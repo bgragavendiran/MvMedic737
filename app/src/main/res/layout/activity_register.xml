@@ -4,29 +4,61 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".login.user.Register">
+    tools:context=".main.user.Register">
 
     <ScrollView
-        android:layout_width="371dp"
-        android:layout_height="510dp"
-        android:fillViewport="true"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="157dp">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/tView2"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Register"
-                android:textAlignment="center"
-                android:textSize="25dp"
-                android:textStyle="bold" />
+                android:layout_marginBottom="40dp"
+                android:layout_height="130dp">
+
+                <ImageView
+                    android:id="@+id/entimage"
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/logo"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="80dp"
+                    android:layout_marginRight="20dp"
+                    >
+
+                </ImageView>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/waves">
+
+                </ImageView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Register"
+
+                    android:textSize="18dp"
+                    android:background="@drawable/text_bg"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:paddingHorizontal="15dp"
+                    android:paddingVertical="2dp"
+                    android:layout_marginTop="80dp"
+                    android:textColor="@color/blue">
+
+                </TextView>
+
+
+            </RelativeLayout>
+
+
 
             <EditText
                 android:id="@+id/tEmail"
@@ -34,6 +66,9 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="Email"
+                android:background="@drawable/text_bg"
+                android:padding="10dp"
+                android:layout_margin="20dp"
                 android:inputType="textEmailAddress" />
 
             <EditText
@@ -42,6 +77,9 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="Name"
+                android:background="@drawable/text_bg"
+                android:padding="10dp"
+                android:layout_margin="20dp"
                 android:inputType="textPersonName" />
 
             <EditText
@@ -50,6 +88,9 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="Adress"
+                android:background="@drawable/text_bg"
+                android:padding="10dp"
+                android:layout_margin="20dp"
                 android:inputType="textPersonName" />
 
             <EditText
@@ -57,6 +98,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:background="@drawable/text_bg"
+                android:padding="10dp"
+                android:layout_margin="20dp"
                 android:hint="city"
                 android:inputType="textPersonName" />
 
@@ -65,6 +109,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:background="@drawable/text_bg"
+                android:padding="10dp"
+                android:layout_margin="20dp"
                 android:hint="Date of birth(dd-mm-yyyy)"
                 android:inputType="textPersonName" />
 
@@ -74,6 +121,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:background="@drawable/text_bg"
+                android:padding="10dp"
+                android:layout_margin="20dp"
                 android:hint="Phone number"
                 android:inputType="textPersonName" />
 
@@ -83,6 +133,9 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="Password"
+                android:background="@drawable/text_bg"
+                android:padding="10dp"
+                android:layout_margin="20dp"
                 android:inputType="textPassword" />
 
             <EditText
@@ -90,18 +143,31 @@
                 android:layout_width="match_parent"
                 android:layout_height="69dp"
                 android:ems="10"
+                android:background="@drawable/text_bg"
+                android:padding="10dp"
+                android:layout_margin="20dp"
                 android:hint="Confirm Password"
                 android:inputType="textPassword" />
 
             <Button
                 android:id="@+id/btnRegister"
-                android:layout_width="match_parent"
+                android:layout_width="200dp"
+                android:layout_gravity="center"
                 android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:background="@drawable/rounded_corner_button"
+
                 android:text="Register" />
 
             <TextView
                 android:id="@+id/textView2"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp"
+                android:text="Already user!!!! Sign in"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:layout_height="32dp" />
 
 
