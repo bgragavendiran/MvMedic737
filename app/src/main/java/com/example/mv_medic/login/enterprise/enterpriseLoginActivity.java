@@ -21,6 +21,8 @@ import com.example.mv_medic.main.user.login2Activity;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.regex.Pattern;
+
 public class enterpriseLoginActivity extends AppCompatActivity {
     TextView es;
     EditText ename, eid, email, eadd, ephno;
@@ -44,15 +46,16 @@ public class enterpriseLoginActivity extends AppCompatActivity {
         eadd = (EditText) findViewById(R.id.eadd);
         ephno = (EditText) findViewById(R.id.ephno);
         ej = (Button) findViewById(R.id.signup);
-        databaseReference = FirebaseDatabase.getInstance().getReference("enterpriseStudent");
+        databaseReference = FirebaseDatabase.getInstance().getReference("enterprisecustomer");
 
         ej.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                addArrayList();
-                Intent intphto = new Intent(getApplicationContext(), login2Activity.class);
-                startActivity(intphto);
+                if(addArrayList()) {
+                    Intent intphto = new Intent(getApplicationContext(), login2Activity.class);
+                    startActivity(intphto);
+                }
 
             }
         });
@@ -68,7 +71,7 @@ public class enterpriseLoginActivity extends AppCompatActivity {
 
     }
 
-    private void addArrayList() {
+    private boolean addArrayList() {
 
         String name = ename.getText().toString().trim();
         String id = eid.getText().toString().trim();
@@ -77,15 +80,19 @@ public class enterpriseLoginActivity extends AppCompatActivity {
         String phone = ephno.getText().toString().trim();
         if (TextUtils.isEmpty(name)) {
             ename.setError("Please enter your Name!");
-        } else if (TextUtils.isEmpty(phone)) {
+        }
+        if (!(isValidMobile(phone))) {
             ephno.setError("Please enter your phone number!");
-        } else if (TextUtils.isEmpty(add)) {
-            eadd.setError("Please enter your Password!");
-        } else if (TextUtils.isEmpty(email1)) {
+        }
+        if (TextUtils.isEmpty(add)) {
+            eadd.setError("Please enter your address!");
+        }
+        if (!(isValidMail(email1))) {
             email.setError("Please put the same password");
-        } else if (TextUtils.isEmpty(id)) {
+        }
+        if (TextUtils.isEmpty(id)) {
             eid.setError("enter the correct id");
-        } else {
+        }
 
             //String id=  databaseReference.push().getKey();
             enterpriseStudent students = new enterpriseStudent(name, phone, id, email1, add);
@@ -100,7 +107,8 @@ public class enterpriseLoginActivity extends AppCompatActivity {
             Toast.makeText(this, "User added", Toast.LENGTH_LONG).show();
             Cleartxt();
 
-        }
+            return true;
+
 
     }
 
@@ -111,6 +119,17 @@ public class enterpriseLoginActivity extends AppCompatActivity {
         eadd.setText("");
         ephno.setText("");
 
+    }
+    private boolean isValidMail(String email) {
+
+        String EMAIL_STRING = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
+                + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
+
+        return Pattern.compile(EMAIL_STRING).matcher(email).matches();
+
+    }
+    private boolean isValidMobile(String phone) {
+        return android.util.Patterns.PHONE.matcher(phone).matches();
     }
 
 
